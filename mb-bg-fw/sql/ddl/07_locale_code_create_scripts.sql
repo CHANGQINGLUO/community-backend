@@ -3,16 +3,16 @@
 /*==============================================================*/
 create table SYS_LOCALE_CODE 
 (
-   LOCALE_CODE_UUID     VARCHAR2(100)        not null,
-   LANGUAGE_CODE_UUID   VARCHAR2(100),
-   COUNTRY_CODE_UUID    VARCHAR2(100),
-   NAME                 VARCHAR2(64),
+   LOCALE_CODE_UUID     VARCHAR(100)        not null,
+   LANGUAGE_CODE_UUID   VARCHAR(100),
+   COUNTRY_CODE_UUID    VARCHAR(100),
+   NAME                 VARCHAR(64),
    IS_DEFAULT            CHAR(1),
    DISPLAY_SEQUENCE     SMALLINT,
-   IMAGE_FILE_NAME      VARCHAR2(255),
-   CREATE_BY            VARCHAR2(50),
+   IMAGE_FILE_NAME      VARCHAR(255),
+   CREATE_BY            VARCHAR(50),
    DATE_CREATE          DATE                 not null,
-   UPDATE_BY            VARCHAR2(50),
+   UPDATE_BY            VARCHAR(50),
    DATE_UPDATE          DATE,
    IS_DELETED           CHAR(1),
    constraint PK_SYS_LOCALE_CODE primary key (LOCALE_CODE_UUID)
