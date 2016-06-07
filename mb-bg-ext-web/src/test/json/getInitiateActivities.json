@@ -1,0 +1,45 @@
+{
+   "header":{
+      "requestid":"12345",
+      "timestamp":"2016-06-05 15:35",
+      "ip":"127.0.0.1",
+      "appid":"ext",
+      "appversion":"1.0",
+      "sessionid":"1234",
+      "user":"stan",
+      "servicename":"getInitiateActivities"
+   },
+   "body":""
+}
+
+
+{
+   "header":    {
+      "requestid": "12345",
+      "timestamp": "2016-06-05 15:35",
+      "ip": "127.0.0.1",
+      "appid": "ext",
+      "appversion": "1.0",
+      "sessionid": "1234",
+      "user": "stan",
+      "servicename": "getInitiateActivities"
+   },
+   "body": [   {
+      "uuid": "12345",
+      "time": "2016-06-07 19:00",
+      "title": "aaaaaaaa",
+      "desription": null,
+      "initiator":       {
+         "name": "stan",
+         "contactNoHp": "123456",
+         "contactNoOffice": "23456",
+         "emailAddress": "abc@gmail.com"
+      },
+      "address": "address",
+      "venue": "googog"
+   }],
+   "status":    {
+      "statuscode": "0",
+      "statusdesc": "Success"
+   }
+}

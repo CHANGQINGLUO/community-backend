@@ -13,7 +13,7 @@ package com.mb.ext.core.service.spec;
 
 import com.mb.framework.service.spec.AbstractBaseDTO;
 
-public class RequestDTO extends AbstractBaseDTO
+public class RequestDTO<T> extends AbstractBaseDTO
 {
 
 	/**
@@ -23,7 +23,7 @@ public class RequestDTO extends AbstractBaseDTO
 
 	private HeaderDTO header;
 
-	private BodyDTO body;
+	private T body;
 
 	/**
 	 * @return the header
@@ -45,7 +45,7 @@ public class RequestDTO extends AbstractBaseDTO
 	/**
 	 * @return the body
 	 */
-	public BodyDTO getBody()
+	public T getBody()
 	{
 		return body;
 	}
@@ -54,7 +54,7 @@ public class RequestDTO extends AbstractBaseDTO
 	 * @param body
 	 *            the body to set
 	 */
-	public void setBody(BodyDTO body)
+	public void setBody(T body)
 	{
 		this.body = body;
 	}
