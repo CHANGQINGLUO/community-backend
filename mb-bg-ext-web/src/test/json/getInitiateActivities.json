@@ -25,18 +25,13 @@
       "servicename": "getInitiateActivities"
    },
    "body": [   {
-      "uuid": "12345",
-      "time": "2016-06-07 19:00",
+      "uuid": "402881f1554c465001554c466d130000",
       "title": "aaaaaaaa",
-      "desription": null,
-      "initiator":       {
-         "name": "stan",
-         "contactNoHp": "123456",
-         "contactNoOffice": "23456",
-         "emailAddress": "abc@gmail.com"
-      },
+      "datetime": "2016-06-07 19:00",
       "address": "address",
-      "venue": "googog"
+      "venue": null,
+      "desription": null,
+      "initiator": null
    }],
    "status":    {
       "statuscode": "0",
