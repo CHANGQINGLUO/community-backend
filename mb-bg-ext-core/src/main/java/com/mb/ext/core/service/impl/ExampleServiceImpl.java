@@ -61,10 +61,10 @@ public class ExampleServiceImpl extends AbstractService implements ExampleServic
 		try
 		{
 			//check user is present or not 
-			user = userDAO.getUser(body.getUserDetails().getEmailAddress());
+			//user = userDAO.getUser(body.getUserDetails().getEmailAddress());
 			if(null == user){
 				// map user DTO to entity
-				user = epMapperUtil.createUserEntity(body.getUserDetails(), header.getUser());
+				//user = epMapperUtil.createUserEntity(body.getUserDetails(), header.getUser());
 				// add user details
 				userDAO.addUser(user);
 			}

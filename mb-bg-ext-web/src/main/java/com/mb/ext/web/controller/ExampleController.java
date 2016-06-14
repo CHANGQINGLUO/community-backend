@@ -27,11 +27,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import com.mb.ext.core.entity.UserEntity;
 import com.mb.ext.core.message.ErrorCode;
 import com.mb.ext.core.service.ExampleService;
+import com.mb.ext.core.service.spec.ActivityDTO;
 import com.mb.ext.core.service.spec.BodyDTO;
 import com.mb.ext.core.service.spec.HeaderDTO;
 import com.mb.ext.core.service.spec.RequestDTO;
+import com.mb.ext.core.service.spec.ResponseDTO;
 import com.mb.ext.core.service.spec.ResultDTO;
 import com.mb.ext.core.service.spec.SaveResultDTO;
+import com.mb.ext.core.service.spec.StatusDTO;
 import com.mb.framework.exception.BusinessException;
 import com.mb.framework.util.log.LogHelper;
 import com.mb.framework.util.property.PropertyRepository;
@@ -71,6 +74,7 @@ public class ExampleController
 	{
 		SaveResultDTO result = null;
 		String accesinfoId = "";
+		/*
 		try
 		{
 			RestPreconditions.checkRequestElementNotNull(request.getBody());
@@ -96,7 +100,7 @@ public class ExampleController
 			result = new SaveResultDTO(e.getMessage(),accesinfoId, propertyRepository.getProperty(ErrorCode.ERROR_RC_INSERT_MSG));
 			logger.info("Status of request for saving is"+result.getCode()+result.getMessage());
 		}
-
+		*/
 		return result;
 	}
 

@@ -1,0 +1,15 @@
+CREATE TABLE ActivityDetails 
+   (	UUID VARCHAR(100) NOT NULL ,
+		Activity_UUID VARCHAR(100) NOT NULL ,
+		Description BLOB,
+		
+		IS_DELETED VARCHAR(1) DEFAULT '0',
+		DATE_CREATE timestamp NOT NULL,
+		CREATE_BY VARCHAR(50),
+		DATE_UPDATE timestamp,
+		UPDATE_BY VARCHAR(50)	  )  ;
+  
+  CREATE UNIQUE INDEX ActivityDetails_UUID_PK ON ActivityDetails (UUID); 
+  
+ALTER TABLE ActivityDetails ADD CONSTRAINT ActivityDetails_UUID_PK PRIMARY KEY (UUID);
+ALTER TABLE ActivityDetails ADD CONSTRAINT ActivityDetails_Activity_FK FOREIGN KEY (Activity_UUID) REFERENCES Activity (UUID);

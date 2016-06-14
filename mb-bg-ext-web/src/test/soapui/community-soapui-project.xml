@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="bce8b5b1-e612-4802-9fac-9c38708c24f2" activeEnvironment="Default" name="community" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="be41765d-2732-4d40-b83a-d5d74c86b63c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://127.0.0.1:8089" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://127.0.0.1:8089</con:endpoint></con:endpoints><con:resource name="example" path="/mb-bg-ext-web/rest/sgEduPlanner/example" id="138ab398-c471-4e8a-9165-a39043f6e6aa"><con:settings/><con:parameters/><con:method name="Method 1" id="e1152914-7bed-4146-b8bf-a5a771412809" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:exam="http://127.0.0.1/mb-bg-ext-web/rest/example">exam:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:exam="http://127.0.0.1/mb-bg-ext-web/rest/example">exam:Response</con:element></con:representation><con:request name="Request 1" id="7e0c9dac-12c0-492c-be04-807ad6dd3efc" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://127.0.0.1:8089</con:endpoint><con:request>{
+  "header": {
+    "requestid": "123",
+    "timestamp": "2016-06-05 15:35",
+    "ip": "127.0.0.1",
+    "appid": "ext",
+    "appversion": "1.0",
+    "sessionid": "1234",
+    "user": "aa",
+    "servicename": "getActivityList"
+  },
+  "body": "aa"
+}</con:request><con:originalUri>http://127.0.0.1/mb-bg-ext-web/rest/example</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="list" path="/mb-bg-ext-web/rest/getActivityList" id="5fc33dd6-5f02-40bd-b1cf-93d8b050ae7a"><con:settings/><con:parameters/><con:method name="Method 1" id="19b6c940-af4a-433f-a595-1f0d8b47028d" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:list="http://127.0.0.1/mb-bg-ext-web/rest/sgEduPlanner/list">list:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="82387c2c-2992-4a51-aa96-c3e01243f666" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://127.0.0.1:8089</con:endpoint><con:request>{
+  "header": {
+    "requestid": "123",
+    "timestamp": "2016-06-05 15:35",
+    "ip": "127.0.0.1",
+    "appid": "ext",
+    "appversion": "1.0",
+    "sessionid": "1234",
+    "user": "aa",
+    "servicename": "getActivityList"
+  },
+  "body": "aa"
+}</con:request><con:originalUri>http://127.0.0.1/mb-bg-ext-web/rest/sgEduPlanner/list</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -6,14 +6,13 @@
       "appid":"ext",
       "appversion":"1.0",
       "sessionid":"1234",
-      "user":"aa",
+      "user":"tom",
       "servicename":"joinActivity"
    },
    "body":{
-      "uuid":"12345"
+      "uuid":"402881f1554f94a101554f9624510000"
    }
 }
-
 
 {
    "header":    {
@@ -23,22 +22,17 @@
       "appid": "ext",
       "appversion": "1.0",
       "sessionid": "1234",
-      "user": "aa",
+      "user": "tom",
       "servicename": "joinActivity"
    },
    "body":    {
-      "uuid": "12345",
-      "time": "2016-06-07 19:00",
-      "title": "aaaaaaaa",
-      "desription": "oooooooooooooooooooooooooooooooooo",
-      "initiator":       {
-         "name": "stan",
-         "contactNoHp": "123456",
-         "contactNoOffice": "23456",
-         "emailAddress": "abc@gmail.com"
-      },
-      "address": "address",
-      "venue": "googog"
+      "uuid": "402881f1554f94a101554f9624510000",
+      "title": null,
+      "datetime": null,
+      "address": null,
+      "venue": null,
+      "desription": null,
+      "initiator": null
    },
    "status":    {
       "statuscode": "0",

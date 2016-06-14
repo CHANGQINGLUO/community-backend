@@ -87,7 +87,7 @@ public class ExampleControllerTest
 		String userName = "testUser";
 
 		RequestDTO request = new RequestDTO();
-
+/*
 		HeaderDTO header = new HeaderDTO();
 		header.setAppName("test");
 		header.setCustomerEmailToSend("testUser.gmail.com");
@@ -103,7 +103,7 @@ public class ExampleControllerTest
 		caseHeader.setKeyApplicantIndex("0");
 
 		body.setCaseHeader(caseHeader);
-
+*/
 		/*CustomerDTO customerDetails = new CustomerDTO();
 		customerDetails.setContactNoHome("567-7658");
 		customerDetails.setContactNoHp("5676-8077");
@@ -127,13 +127,13 @@ public class ExampleControllerTest
 		userDetails.setEmailAddress("testUser@gmail.com");
 		userDetails.setName("TestUser");
 
-		body.setUserDetails(userDetails);
+		//body.setUserDetails(userDetails);
 
 		
 
 		
 		//body.setYrcOutput(yrcOutput);
-		request.setBody(body);
+		//request.setBody(body);
 
 		return request;
 	}

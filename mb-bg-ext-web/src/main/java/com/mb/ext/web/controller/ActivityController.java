@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.mb.ext.core.service.ExampleService;
+import com.mb.ext.core.service.ActivityService;
 import com.mb.ext.core.service.spec.ActivityDTO;
 import com.mb.ext.core.service.spec.BodyDTO;
 import com.mb.ext.core.service.spec.RequestDTO;
@@ -21,12 +21,14 @@ import com.mb.ext.core.service.spec.ResponseDTO;
 import com.mb.ext.core.service.spec.StatusDTO;
 import com.mb.ext.core.service.spec.UserDTO;
 import com.mb.framework.util.log.LogHelper;
-import com.mb.framework.util.property.PropertyRepository;
-import com.mb.framework.web.common.RestPreconditions;
 
 @Controller
 public class ActivityController {
 	private LogHelper logger = LogHelper.getInstance(this.getClass().getName());
+	
+	@Autowired
+	@Qualifier("ActivityService")
+	private ActivityService<BodyDTO> activityService;
 
 	@RequestMapping(value = "/getAllActivies", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
@@ -39,20 +41,7 @@ public class ActivityController {
 		status.setStatusdesc("Success");
 		response.setStatus(status);
 		try {
-			ActivityDTO activity = new ActivityDTO();
-			activity.setUuid("12345");
-			activity.setAddress("address");
-			activity.setTime("2016-06-07 19:00");
-			UserDTO user= new UserDTO();
-			user.setName("stan");
-			user.setContactNoHp("123456");
-			user.setContactNoOffice("23456");
-			user.setEmailAddress("abc@gmail.com");
-			activity.setInitiator(user);
-			activity.setTitle("aaaaaaaa");
-			activity.setVenue("googog");
-			List<ActivityDTO> list=new ArrayList<ActivityDTO>();
-			list.add(activity);
+			List<ActivityDTO> list=activityService.getAllActivies(request.getHeader());
 			response.setBody(list);
 		} catch (Exception e) {
 			logger.error("Exception occurred in getAllActivies", e);
@@ -74,20 +63,7 @@ public class ActivityController {
 		status.setStatusdesc("Success");
 		response.setStatus(status);
 		try {
-			ActivityDTO activity = new ActivityDTO();
-			activity.setUuid("12345");
-			activity.setAddress("address");
-			activity.setTime("2016-06-07 19:00");
-			UserDTO user= new UserDTO();
-			user.setName("stan");
-			user.setContactNoHp("123456");
-			user.setContactNoOffice("23456");
-			user.setEmailAddress("abc@gmail.com");
-			activity.setInitiator(user);
-			activity.setTitle("aaaaaaaa");
-			activity.setVenue("googog");
-			List<ActivityDTO> list=new ArrayList<ActivityDTO>();
-			list.add(activity);
+			List<ActivityDTO> list=activityService.getInitiateActivities(request.getHeader());
 			response.setBody(list);
 		} catch (Exception e) {
 			logger.error("Exception occurred in getInitiateActivities", e);
@@ -109,20 +85,7 @@ public class ActivityController {
 		status.setStatusdesc("Success");
 		response.setStatus(status);
 		try {
-			ActivityDTO activity = new ActivityDTO();
-			activity.setUuid("12345");
-			activity.setAddress("address");
-			activity.setTime("2016-06-07 19:00");
-			UserDTO user= new UserDTO();
-			user.setName("stan");
-			user.setContactNoHp("123456");
-			user.setContactNoOffice("23456");
-			user.setEmailAddress("abc@gmail.com");
-			activity.setInitiator(user);
-			activity.setTitle("aaaaaaaa");
-			activity.setVenue("googog");
-			List<ActivityDTO> list=new ArrayList<ActivityDTO>();
-			list.add(activity);
+			List<ActivityDTO> list=activityService.getJoinedActivities(request.getHeader());
 			response.setBody(list);
 		} catch (Exception e) {
 			logger.error("Exception occurred in getJoinedActivities", e);
@@ -144,19 +107,7 @@ public class ActivityController {
 		status.setStatusdesc("Success");
 		response.setStatus(status);
 		try {
-			ActivityDTO activity = new ActivityDTO();
-			activity.setUuid("12345");
-			activity.setAddress("address");
-			activity.setTime("2016-06-07 19:00");
-			UserDTO user= new UserDTO();
-			user.setName("stan");
-			user.setContactNoHp("123456");
-			user.setContactNoOffice("23456");
-			user.setEmailAddress("abc@gmail.com");
-			activity.setInitiator(user);
-			activity.setTitle("aaaaaaaa");
-			activity.setVenue("googog");
-			activity.setDesription("oooooooooooooooooooooooooooooooooo");
+			ActivityDTO activity = activityService.getActivityDetails(request);
 			response.setBody(activity);
 		} catch (Exception e) {
 			logger.error("Exception occurred in getActivityDetails", e);
@@ -178,19 +129,7 @@ public class ActivityController {
 		status.setStatusdesc("Success");
 		response.setStatus(status);
 		try {
-			ActivityDTO activity = new ActivityDTO();
-			activity.setUuid("12345");
-			activity.setAddress("address");
-			activity.setTime("2016-06-07 19:00");
-			UserDTO user= new UserDTO();
-			user.setName("stan");
-			user.setContactNoHp("123456");
-			user.setContactNoOffice("23456");
-			user.setEmailAddress("abc@gmail.com");
-			activity.setInitiator(user);
-			activity.setTitle("aaaaaaaa");
-			activity.setVenue("googog");
-			activity.setDesription("oooooooooooooooooooooooooooooooooo");
+			ActivityDTO activity = activityService.createActivity(request);
 			response.setBody(activity);
 		} catch (Exception e) {
 			logger.error("Exception occurred in createActivity", e);
@@ -212,19 +151,7 @@ public class ActivityController {
 		status.setStatusdesc("Success");
 		response.setStatus(status);
 		try {
-			ActivityDTO activity = new ActivityDTO();
-			activity.setUuid("12345");
-			activity.setAddress("address");
-			activity.setTime("2016-06-07 19:00");
-			UserDTO user= new UserDTO();
-			user.setName("stan");
-			user.setContactNoHp("123456");
-			user.setContactNoOffice("23456");
-			user.setEmailAddress("abc@gmail.com");
-			activity.setInitiator(user);
-			activity.setTitle("aaaaaaaa");
-			activity.setVenue("googog");
-			activity.setDesription("oooooooooooooooooooooooooooooooooo");
+			ActivityDTO activity =activityService.modifyActivity(request);
 			response.setBody(activity);
 		} catch (Exception e) {
 			logger.error("Exception occurred in modifyActivity", e);
@@ -246,19 +173,7 @@ public class ActivityController {
 		status.setStatusdesc("Success");
 		response.setStatus(status);
 		try {
-			ActivityDTO activity = new ActivityDTO();
-			activity.setUuid("12345");
-			activity.setAddress("address");
-			activity.setTime("2016-06-07 19:00");
-			UserDTO user= new UserDTO();
-			user.setName("stan");
-			user.setContactNoHp("123456");
-			user.setContactNoOffice("23456");
-			user.setEmailAddress("abc@gmail.com");
-			activity.setInitiator(user);
-			activity.setTitle("aaaaaaaa");
-			activity.setVenue("googog");
-			activity.setDesription("oooooooooooooooooooooooooooooooooo");
+			ActivityDTO activity = activityService.deleteActivity(request);
 			response.setBody(activity);
 		} catch (Exception e) {
 			logger.error("Exception occurred in getActivityList", e);
@@ -280,19 +195,7 @@ public class ActivityController {
 		status.setStatusdesc("Success");
 		response.setStatus(status);
 		try {
-			ActivityDTO activity = new ActivityDTO();
-			activity.setUuid("12345");
-			activity.setAddress("address");
-			activity.setTime("2016-06-07 19:00");
-			UserDTO user= new UserDTO();
-			user.setName("stan");
-			user.setContactNoHp("123456");
-			user.setContactNoOffice("23456");
-			user.setEmailAddress("abc@gmail.com");
-			activity.setInitiator(user);
-			activity.setTitle("aaaaaaaa");
-			activity.setVenue("googog");
-			activity.setDesription("oooooooooooooooooooooooooooooooooo");
+			ActivityDTO activity = activityService.joinActivity(request);
 			response.setBody(activity);
 		} catch (Exception e) {
 			logger.error("Exception occurred in modifyActivity", e);

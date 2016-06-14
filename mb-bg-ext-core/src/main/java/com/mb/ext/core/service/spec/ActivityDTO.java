@@ -5,12 +5,13 @@ public class ActivityDTO extends BodyDTO {
 	private static final long serialVersionUID = 1L;
 
 	private String uuid;
-	private String time;
 	private String title;
-	private String desription;
-	private UserDTO initiator;
+	private String datetime;
 	private String address;
 	private String venue;
+
+	private String desription;
+	private UserDTO initiator;
 
 	public String getUuid() {
 		return uuid;
@@ -20,12 +21,12 @@ public class ActivityDTO extends BodyDTO {
 		this.uuid = uuid;
 	}
 
-	public String getTime() {
-		return time;
+	public String getDatetime() {
+		return datetime;
 	}
 
-	public void setTime(String time) {
-		this.time = time;
+	public void setDatetime(String datetime) {
+		this.datetime = datetime;
 	}
 
 	public String getTitle() {
