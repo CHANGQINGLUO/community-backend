@@ -1,0 +1,42 @@
+{
+   "header":{
+      "requestid":"12345",
+      "timestamp":"2016-06-05 15:35",
+      "ip":"127.0.0.1",
+      "appid":"ext",
+      "appversion":"1.0",
+      "sessionid":"1234",
+      "user":"stan",
+      "servicename":"getAllQuestions"
+   },
+   "body":""
+}
+
+
+{
+   "header":    {
+      "requestid": "12345",
+      "timestamp": "2016-06-05 15:35",
+      "ip": "127.0.0.1",
+      "appid": "ext",
+      "appversion": "1.0",
+      "sessionid": "1234",
+      "user": "stan",
+      "servicename": "getAllQuestions"
+   },
+   "body": [   {
+      "uuid": "402881f15554a7fa015554a8210f0000",
+      "question": "wowowowwowowwowowow",
+      "user":       {
+         "name": "stan",
+         "contactNoHp": "22222222",
+         "contactNoOffice": "33333333",
+         "emailAddress": "aa@aa.com"
+      },
+      "totalAnswer": 1
+   }],
+   "status":    {
+      "statuscode": "0",
+      "statusdesc": "Success"
+   }
+}
