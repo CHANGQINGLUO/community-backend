@@ -3,7 +3,7 @@ CREATE TABLE Activity
         Title VARCHAR(1000),
         Datetime timestamp,
 		Address VARCHAR(1000),
-		initiator VARCHAR(1000) NOT NULL,
+		initiator VARCHAR(100) NOT NULL,
 		Venue VARCHAR(1000),
 		Description BLOB,
 

@@ -1,6 +1,5 @@
 package com.mb.ext.web.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,6 @@ import com.mb.ext.core.service.spec.BodyDTO;
 import com.mb.ext.core.service.spec.RequestDTO;
 import com.mb.ext.core.service.spec.ResponseDTO;
 import com.mb.ext.core.service.spec.StatusDTO;
-import com.mb.ext.core.service.spec.UserDTO;
 import com.mb.framework.util.log.LogHelper;
 
 @Controller
